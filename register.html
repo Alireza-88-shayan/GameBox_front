@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/1cab63a006.js" crossorigin="anonymous"></script>
+</head>
+<body class="r_s_body">
+    <section>
+        <h1>ثبت نام</h1>
+        <form id="r_form" class="r_s_form" action="">
+            <div class="username_input">
+                <input placeholder="" type="text" id="r_username" name="username" required>
+                <label for="username">نام کاربری</label>
+            </div>
+            <div class="email_input">
+                <input placeholder="" type="text" id="r_email" name="email" required>
+                <label for="email">ایمیل</label>
+            </div>
+            <div class="password_input">
+                <input placeholder="" type="text" id="r_password" name="password" required>
+                <label for="password">رمز عبور</label>
+            </div>
+            <div class="confirm_password_input">
+                <input placeholder="" type="text" id="r_confirm_password" name="confirm_password" required>
+                <label for="confirm_password">تأیید رمز عبور</label>
+            </div>
+            <button class="submit_button" id="register_button" type="submit">ثبت نام</button>
+        </form>
+        <div class="error_box" id="r_error_box">
+            <span id="r_error_message"></p>
+        </div>
+        <div class="finish_box" id="r_finish_box">
+            <span id="r_finish_message"></p>
+        </div>
+        <a href="sign_in.html">قبلا ثبت نام کرده اید؟ وارد شوید</a>
+        <a href="index.html">به صفحه اصلی بروید</a>
+    </section>
+    <script src="js/r_validation.js"></script>
+</body>
+</html>
