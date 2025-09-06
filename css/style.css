@@ -128,7 +128,7 @@ nav .a_holder{
     margin: 0px 0px 0px 5vw;
 }
 
-nav .a_holder a{
+nav .a_holder a, .product a{
     padding: 5px 15px;
     background-color: var(--color_1);
     border-radius: 10px;
@@ -141,9 +141,9 @@ nav .a_holder a{
     margin: 0px;
 }
 
-nav .a_holder a:hover, .best_sale a:hover{
+nav .a_holder a:hover, .best_sale a:hover, .product a:hover{
     background-color: #ffffff;
-    box-shadow: 0px 0px 5px 2px #000000;
+    box-shadow: 0px 0px 5px 3px #000000;
     margin-bottom: 5px;
 }
 
@@ -153,7 +153,7 @@ a{
 }
 
 .welcome{
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -212,77 +212,7 @@ a{
     font-size: 30px;
 }
 
-@media (max-width: 930px){
-    nav{
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        position: relative;
-    }
 
-    .best_sale{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    body{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-    }
-
-    .side_bar{
-        position: absolute;
-        top: 115px;
-        right: -200px;
-    }
-
-    #side_bar{
-        transition: 1s right;
-        width: fit-content;
-    }
-
-    .open_sb{
-        position: absolute;
-        top: 115px;
-        right: 0px;
-        height: fit-content;
-    }
-
-    .sb_button{
-        display: inherit;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-    }
-    
-    header{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-    }
-}
-
-@media (max-width: 430px) {
-    .best_sale .price_texts{
-        width: 300px;
-    }
-
-    nav .a_holder{
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-    
-    .side_bar, .open_sb{
-        top: 165px;
-    }
-
-    .sb_button{
-        right: 5px;
-    }
-}
 
 .best_sale{
     width: 320px;
@@ -416,15 +346,15 @@ a{
 
 .r_s_body{
     width: 100%;
-    height: 75vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     background-color: #ffffff;
 }
 
-.r_s_body section{
+.r_s_section{
     width: 325px;
     height: fit-content;
     padding: 25px;
@@ -436,6 +366,11 @@ a{
     box-shadow: 0px 0px 5px 2px #222222;
     gap: 5px;
     background-color: var(--color_2);
+    margin-top: 25px;
+}
+
+.r_s_body nav{
+    height: auto;
 }
 
 .r_s_form{
@@ -482,13 +417,13 @@ a{
     box-shadow: 0px 0px 5px 2px #000000;
 }
 
-.r_s_body a, .sb_content a{
+.r_s_section a, .sb_content a{
     border-radius: 25px;
     padding: 0px 15px;
     transition: 0.5s;
 }
 
-.r_s_body a:hover, .sb_content a:hover{
+.r_s_section a:hover, .sb_content a:hover{
     color: #ffffff;
     background-color: var(--color_1);
 }
@@ -553,7 +488,7 @@ a{
     padding: 5px;
 }
 
-.r_s_body{
+.r_s_section{
     transition: 0.5s;
 }
 
@@ -589,6 +524,129 @@ a{
     align-items: center;
 }
 
+.p_c_holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    overflow-x: auto;
+}
+
 .p_slider{
-    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    overflow-x: auto;
+    gap: 20px;
+    height: 400px;
+    overflow-y: hidden;
+}
+
+.product{
+    position: relative;
+    height: 350px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color_2);
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.product:hover{
+    scale: 1.08;
+}
+
+.product img{
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.product p{
+    direction: ltr;
+}
+
+@media (max-width: 930px){
+    nav{
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+    }
+
+    .best_sale{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .side_bar{
+        position: absolute;
+        top: 115px;
+        right: -200px;
+    }
+
+    #side_bar{
+        transition: 1s right;
+        width: fit-content;
+        background-color: #eeeeee;
+    }
+
+    .open_sb{
+        position: absolute;
+        top: 115px;
+        right: 0px;
+        height: fit-content;
+    }
+
+    .sb_button{
+        display: inherit;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+}
+
+@media (max-width: 430px) {
+    .best_sale .price_texts{
+        width: 300px;
+    }
+
+    nav .a_holder{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    
+    .side_bar, .open_sb{
+        top: 165px;
+    }
+
+    .sb_button{
+        right: 5px;
+    }
 }
