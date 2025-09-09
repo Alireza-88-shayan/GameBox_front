@@ -29,8 +29,8 @@ body{
     font-size: 20px;
     overflow-x: hidden;
     background-image: url(../assets/image/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-y;
+    background-size: 100vw;
     gap: 10px;
 }
 
@@ -125,10 +125,11 @@ nav .a_holder{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0px 0px 0px 5vw;
+    margin: 0px 0px 0px 1vw;
+    flex-wrap: wrap;
 }
 
-nav .a_holder a, .product a{
+nav .a_holder a, .product a, .product_i a{
     padding: 5px 15px;
     background-color: var(--color_1);
     border-radius: 10px;
@@ -141,7 +142,7 @@ nav .a_holder a, .product a{
     margin: 0px;
 }
 
-nav .a_holder a:hover, .best_sale a:hover, .product a:hover{
+nav .a_holder a:hover, .best_sale a:hover, .product a:hover, .product_i a:hover{
     background-color: #ffffff;
     box-shadow: 0px 0px 5px 3px #000000;
     margin-bottom: 5px;
@@ -337,7 +338,7 @@ a{
     align-items: center;
 }
 
-.about_us_body main{
+.about_us_body main, .answers{
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -440,7 +441,7 @@ a{
     background-color: #286605;
 }
 
-.about_us_body main{
+.about_us_body main, .answers{
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -448,10 +449,10 @@ a{
     gap: 50px;
 }
 
-.about_us_body main div{
+.about_us_body main div, .answers p{
     width: 80%;
     border-radius: 100px;
-    padding: 0px 25px;
+    padding: 10px 25px;
     margin: 0px 50px;
     display: flex;
     flex-direction: column;
@@ -578,6 +579,50 @@ a{
     direction: ltr;
 }
 
+.index_body .games_p .products_i{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 99%;
+}
+
+.index_body .games_p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 99%;
+}
+
+.product_i{
+    position: relative;
+    height: 350px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color_2);
+    border-radius: 10px;
+    transition: 0.5s ease;
+    margin: auto;
+}
+
+.product_i:hover{
+    scale: 1.08;
+}
+
+.product_i p{
+    direction: ltr;
+}
+
+.product_i img{
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+}
+
 @media (max-width: 930px){
     nav{
         flex-direction: column;
@@ -589,6 +634,7 @@ a{
     .best_sale{
         flex-direction: column;
         align-items: center;
+        width: fit-content;
     }
 
     body{
@@ -638,8 +684,7 @@ a{
     }
 
     nav .a_holder{
-        display: grid;
-        grid-template-columns: auto auto;
+        width: fit-content;
     }
     
     .side_bar, .open_sb{
@@ -648,5 +693,12 @@ a{
 
     .sb_button{
         right: 5px;
+    }
+}
+
+@media (max-width: 385px) {
+    .r_s_section{
+        width: 300px;
+        padding: 0px;
     }
 }
