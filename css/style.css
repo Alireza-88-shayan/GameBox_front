@@ -754,6 +754,17 @@ a{
     }
 }
 
+@media (max-width: 660px){
+    .p_main_info{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .buy_info{
+        margin-right: 0px;
+    }
+}
+
 @media (max-width: 430px) {
     .best_sale .price_texts{
         width: 300px;
